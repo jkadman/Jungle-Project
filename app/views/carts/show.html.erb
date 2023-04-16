@@ -1,5 +1,17 @@
 <section class="cart-show">
 
+  
+
+  <% if enhanced_cart.empty? %>
+    
+    <div class ="alert alert-danger" >
+    <p>
+   <h4> Please add an item to your cart, you can do by visiting <a class="navbar-brand" href="/">Jungle</a> </h4>
+    </p>
+    </div> 
+
+  <% else %>
+
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -14,7 +26,7 @@
           <th>Price</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="quantity">
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
@@ -25,7 +37,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -49,4 +61,5 @@
     </div>
   </div>
 
+  <% end %>
 </section>
