@@ -1,7 +1,7 @@
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
 <div>
-Your store contains <code> <%= @category %> </code> categories 
+<h3> Your store contains <code> <%= @category %> </code> categories and <code> <%= @product %> </code> products </h3>
 <br>
-Your store contains <code> <%= @product %> </code> products
+<h3><%= link_to 'Product Index', [:admin, :products], class: "nav-link" -%> </h3>
 </div>
