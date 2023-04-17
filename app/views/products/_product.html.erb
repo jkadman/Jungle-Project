@@ -1,6 +1,6 @@
 <article>
   <%= link_to product_path(product) do %>
-    <%= image_tag product.image.thumb.url , alt: product.name %>
+    <%= image_tag product.image.thumb.url if product.image.thumb.url %>
     <h1>
       <span><%= product.name %></span>
       <span><%= humanized_money_with_symbol product.price %></span>
