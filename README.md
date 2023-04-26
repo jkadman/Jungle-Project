@@ -29,6 +29,3 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
-
-
-https://stackoverflow.com/questions/53510040/carrierwave-argument-error-nil-location-provided-cant-build-uri-for-an-image
